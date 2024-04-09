@@ -49,8 +49,13 @@ export const Content = styled(Dialog.Content)`
       margin-top: 1.5rem;
       cursor: pointer;
       transition: background-color 0.2s;
-      &:hover {
+      &:not(:disabled):hover {
         background-color: ${({ theme }) => theme['green-700']};
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
       }
     }
   }
@@ -97,8 +102,8 @@ export const TransactionTypeButton = styled(
       variant === 'income' ? theme['green-300'] : theme['red-300']};
   }
 
-  &[data-state="unchecked"]:hover {
-background: ${props => props.theme['gray-600']}
+  &[data-state='unchecked']:hover {
+    background: ${(props) => props.theme['gray-600']};
   }
 
   &[data-state='checked'] {
@@ -111,4 +116,3 @@ background: ${props => props.theme['gray-600']}
     }
   }
 `;
-
