@@ -47,6 +47,30 @@
       "price": 25,
       "type": "outcome",
       "createdAt": "2024-04-10T09:07:44.914Z"
+    },
+    {
+      "id": "9d04",
+      "description": "arroz doce",
+      "category": "Alimentação",
+      "price": 1,
+      "type": "outcome",
+      "createdAt": "2024-04-11T09:00:47.939Z"
+    },
+    {
+      "id": "e7ca",
+      "description": "arroz doce",
+      "category": "teste2",
+      "price": 123123,
+      "type": "outcome",
+      "createdAt": "2024-04-11T09:10:58.158Z"
+    },
+    {
+      "id": "7f12",
+      "description": "arroz docinho",
+      "category": "Alimentação",
+      "price": 5,
+      "type": "outcome",
+      "createdAt": "2024-04-11T09:11:53.939Z"
     }
   ]
 }
