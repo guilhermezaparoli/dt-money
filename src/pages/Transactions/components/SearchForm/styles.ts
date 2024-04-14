@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const SearchFormContainer = styled.form`
   display: flex;
@@ -16,7 +16,7 @@ export const SearchFormContainer = styled.form`
       color: ${({ theme }) => theme['gray-500']};
     }
   }
- 
+
   button {
     display: flex;
     align-items: center;
@@ -29,7 +29,10 @@ export const SearchFormContainer = styled.form`
     color: ${({ theme }) => theme['green-300']};
     font-weight: bold;
     border-radius: 6px;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s;
     cursor: pointer;
 
     &:not(:disabled):hover {
@@ -43,4 +46,4 @@ export const SearchFormContainer = styled.form`
       opacity: 0.7;
     }
   }
-`;
+`

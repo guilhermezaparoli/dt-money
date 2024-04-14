@@ -1,46 +1,46 @@
-import * as Dialog from '@radix-ui/react-dialog';
+import * as Dialog from '@radix-ui/react-dialog'
 import {
   CloseButton,
   Content,
   Overlay,
   TransactionType,
   TransactionTypeButton,
-} from './styles';
-import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react';
-import * as z from 'zod';
-import { Controller, useForm } from 'react-hook-form';
-import { useContext } from 'react';
-import { TransactionsContext } from '../../contexts/TransactionsContext';
+} from './styles'
+import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
+import * as z from 'zod'
+import { Controller, useForm } from 'react-hook-form'
+import { useContext } from 'react'
+import { TransactionsContext } from '../../contexts/TransactionsContext'
 
 const newTransactionFormSchema = z.object({
   description: z.string(),
   price: z.number(),
   category: z.string(),
   type: z.enum(['income', 'outcome']),
-});
+})
 
-type newTransactionFomInpuuts = z.infer<typeof newTransactionFormSchema>;
+type newTransactionFomInpuuts = z.infer<typeof newTransactionFormSchema>
 
 export function NewTransactionModal() {
-  const { createTransactions } = useContext(TransactionsContext);
+  const { createTransactions } = useContext(TransactionsContext)
   const {
     control,
     register,
     handleSubmit,
     reset,
     formState: { isSubmitting },
-  } = useForm<newTransactionFomInpuuts>();
+  } = useForm<newTransactionFomInpuuts>()
 
   async function handleCreateNewTransaction(data: newTransactionFomInpuuts) {
-    const { category, description, price, type } = data;
+    const { category, description, price, type } = data
 
     createTransactions({
       category,
       description,
       price,
       type,
-    });
-    reset();
+    })
+    reset()
   }
 
   return (
@@ -98,5 +98,5 @@ export function NewTransactionModal() {
         </form>
       </Content>
     </Dialog.Portal>
-  );
+  )
 }
